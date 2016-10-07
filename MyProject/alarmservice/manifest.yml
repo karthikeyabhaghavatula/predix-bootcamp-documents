@@ -1,0 +1,9 @@
+---
+applications:
+  - name: karthik-alarm-service
+    buildpack: java_buildpack
+    path: target/alarmservice-0.0.1-SNAPSHOT.jar
+    services:
+      - karthik-postgres
+env:
+    db_service_name: karthik-postgres

@@ -1,0 +1,4 @@
+activeuserprofiles=Team;devbox;localhost
+eclipse.preferences.version=1
+org.eclipse.rse.systemtype.local.systemType.defaultUserId=predix
+useridperkey=localhost.Local\=predix;

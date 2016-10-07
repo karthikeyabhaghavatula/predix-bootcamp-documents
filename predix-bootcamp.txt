@@ -1,0 +1,165 @@
+
+predix-acs-training": [
+   {
+    "credentials": {
+     "uri": "https://predix-acs-training.run.aws-usw02-pr.ice.predix.io",
+     "zone": {
+      "http-header-name": "Predix-Zone-Id",
+      "http-header-value": "a7a34844-dda1-478c-9f0c-b4158b4fef4f",
+      "oauth-scope": "predix-acs-training.zones.a7a34844-dda1-478c-9f0c-b4158b4fef4f.user"
+     }
+    },
+    "label": "predix-acs-training",
+    "name": "karthik-acs",
+    "plan": "Free",
+    "provider": null,
+    "syslog_drain_url": null,
+    "tags": []
+   }
+  ],
+
+
+"predix-uaa-training": [
+   {
+    "credentials": {
+     "issuerId": "https://6860bdd4-7958-4409-9b19-d1706481170d.predix-uaa-training.run.aws-usw02-pr.ice.predix.io/oauth/token",
+     "uri": "https://6860bdd4-7958-4409-9b19-d1706481170d.predix-uaa-training.run.aws-usw02-pr.ice.predix.io",
+     "zone": {
+      "http-header-name": "X-Identity-Zone-Id",
+      "http-header-value": "6860bdd4-7958-4409-9b19-d1706481170d"
+     }
+    },
+    "label": "predix-uaa-training",
+    "name": "karthik-uaa",
+    "plan": "Free",
+    "provider": null,
+    "syslog_drain_url": null,
+    "tags": []
+   }
+  ]
+ }
+
+
+
+uaac client update karthik-client-uaa --authorities "clients.read clients.write scim.write scim.read predix-acs-training.zones.a7a34844-dda1-478c-9f0c-b4158b4fef4f.user acs.policies.read acs.policies.write acs.attributes.read acs.attributes.write "
+
+
+
+predix-asset": [
+   {
+    "credentials": {
+     "instanceId": "1245796f-5e22-4842-9361-785d41033edd",
+     "scriptEngine_uri": "https://1245796f-5e22-4842-9361-785d41033edd.predix-script-engine.run.aws-usw02-pr.ice.predix.io",
+     "uri": "https://predix-asset.run.aws-usw02-pr.ice.predix.io",
+     "zone": {
+      "http-header-name": "Predix-Zone-Id",
+      "http-header-value": "1245796f-5e22-4842-9361-785d41033edd",
+      "oauth-scope": "predix-asset.zones.1245796f-5e22-4842-9361-785d41033edd.user"
+     }
+    },
+    "label": "predix-asset",
+    "name": "karthik-predix-asset",
+    "plan": "Tiered",
+    "provider": null,
+    "syslog_drain_url": null,
+    "tags": []
+   }
+
+client karthik-uaa  authorities: clients.read predix-acs-training.zones.a7a34844-dda1-478c-9f0c-b4158b4fef4f.user acs.policies.read acs.policies.write acs.attributes.read
+        clients.write acs.attributes.write scim.write scim.read
+
+
+"predix-analytics-catalog": [
+   {
+    "credentials": {
+     "catalog_uri": "https://predix-analytics-catalog-release.run.aws-usw02-pr.ice.predix.io",
+     "zone-http-header-name": "Predix-Zone-Id",
+     "zone-http-header-value": "80a8fe08-d432-4869-bc86-fa2ae9cd700b",
+     "zone-oauth-scope": "analytics.zones.80a8fe08-d432-4869-bc86-fa2ae9cd700b.user"
+    },
+    "label": "predix-analytics-catalog",
+    "name": "karthik-analytics-catalog",
+    "plan": "Bronze",
+    "provider": null,
+    "syslog_drain_url": null,
+    "tags": []
+   }
+  "predix-analytics-runtime": [
+   {
+    "credentials": {
+     "config_uri": "https://predix-analytics-config-release.run.aws-usw02-pr.ice.predix.io",
+     "execution_uri": "https://predix-analytics-execution-release.run.aws-usw02-pr.ice.predix.io",
+     "monitoring_uri": "https:// 	predix-analytics-monitoring-release.run.aws-usw02-pr.ice.predix.io",
+     "scheduler_uri": "https://predix-scheduler-service-release.run.aws-usw02-pr.ice.predix.io",
+     "zone-http-header-name": "Predix-Zone-Id",
+     "zone-http-header-value": "66ea254e-79bb-4545-9c4d-c84d5d3c6b65",
+     "zone-oauth-scope": "analytics.zones.66ea254e-79bb-4545-9c4d-c84d5d3c6b65.user"
+    },
+    "label": "predix-analytics-runtime",
+    "name": "karthik-analytics-runtime",
+    "plan": "Bronze",
+    "provider": null,
+    "syslog_drain_url": null,
+    "tags": []
+   }
+  ],
+
+
+uaac client update karthik-client-uaa --authorities "clients.read predix-acs-training.zones.a7a34844-dda1-478c-9f0c-b4158b4fef4f.user acs.policies.write acs.attributes.write scim.read acs.policies.read predix-asset.zones.1245796f-5e22-4842-9361-785d41033edd.user acs.attributes.read clients.write scim.write analytics.zones.66ea254e-79bb-4545-9c4d-c84d5d3c6b65.user analytics.zones.80a8fe08-d432-4869-bc86-fa2ae9cd700b.user"
+
+eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiI0NDg0MDZiZC0yZDM0LTQ3NTgtYWVkOC0zYzQ2NjJmZGYzZWEiLCJzdWIiOiJrYXJ0aGlrLWNsaWVudC11YWEiLCJzY29wZSI6WyJjbGllbnRzLnJlYWQiLCJwcmVkaXgtYWNzLXRyYWluaW5nLnpvbmVzLmE3YTM0ODQ0LWRkYTEtNDc4Yy05ZjBjLWI0MTU4YjRmZWY0Zi51c2VyIiwiYWNzLnBvbGljaWVzLnJlYWQiLCJhY3MucG9saWNpZXMud3JpdGUiLCJwcmVkaXgtYXNzZXQuem9uZXMuMTI0NTc5NmYtNWUyMi00ODQyLTkzNjEtNzg1ZDQxMDMzZWRkLnVzZXIiLCJhY3MuYXR0cmlidXRlcy5yZWFkIiwiYW5hbHl0aWNzLnpvbmVzLjgwYThmZTA4LWQ0MzItNDg2OS1iYzg2LWZhMmFlOWNkNzAwYi51c2VyIiwiYW5hbHl0aWNzLnpvbmVzLjY2ZWEyNTRlLTc5YmItNDU0NS05YzRkLWM4NGQ1ZDNjNmI2NS51c2VyIiwiYWNzLmF0dHJpYnV0ZXMud3JpdGUiLCJjbGllbnRzLndyaXRlIiwic2NpbS53cml0ZSIsInNjaW0ucmVhZCJdLCJjbGllbnRfaWQiOiJrYXJ0aGlrLWNsaWVudC11YWEiLCJjaWQiOiJrYXJ0aGlrLWNsaWVudC11YWEiLCJhenAiOiJrYXJ0aGlrLWNsaWVudC11YWEiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjUzZmEzNTNmIiwiaWF0IjoxNDc1NzQ1Nzg5LCJleHAiOjE0NzU3ODg5ODksImlzcyI6Imh0dHBzOi8vNjg2MGJkZDQtNzk1OC00NDA5LTliMTktZDE3MDY0ODExNzBkLnByZWRpeC11YWEtdHJhaW5pbmcucnVuLmF3cy11c3cwMi1wci5pY2UucHJlZGl4LmlvL29hdXRoL3Rva2VuIiwiemlkIjoiNjg2MGJkZDQtNzk1OC00NDA5LTliMTktZDE3MDY0ODExNzBkIiwiYXVkIjpbImthcnRoaWstY2xpZW50LXVhYSIsImNsaWVudHMiLCJwcmVkaXgtYWNzLXRyYWluaW5nLnpvbmVzLmE3YTM0ODQ0LWRkYTEtNDc4Yy05ZjBjLWI0MTU4YjRmZWY0ZiIsImFjcy5wb2xpY2llcyIsInByZWRpeC1hc3NldC56b25lcy4xMjQ1Nzk2Zi01ZTIyLTQ4NDItOTM2MS03ODVkNDEwMzNlZGQiLCJhY3MuYXR0cmlidXRlcyIsImFuYWx5dGljcy56b25lcy44MGE4ZmUwOC1kNDMyLTQ4NjktYmM4Ni1mYTJhZTljZDcwMGIiLCJhbmFseXRpY3Muem9uZXMuNjZlYTI1NGUtNzliYi00NTQ1LTljNGQtYzg0ZDVkM2M2YjY1Iiwic2NpbSJdfQ.jnIE9APYy6Hg6LptCAlGGJ7YsjYuuYjelTOB1sE1trQlvsrczJp7n65lE6x3d4MAT4ANutPGsPPcE7p8k2wXgUxw6h6s5hwN4acnmqfWaXqSxQrObcVDpYP5wAG4kHRza8M93GiJqSImXepE4v1WdI9QKdJicH9fLPbLECoebUhZOQc5OLhtYWOBNhQI7DBCMQ1zCAb8ncYh1JIlrv0jb7eu6P46Lin99HZ70s-iV1lT-8Dqus72Ow25Ir-ItYebmmkCahKjhNjOBTiEvqIk5peIxKdrDtaVDkZpKGUgwELyEG7TuoEI4yWDL78lF-rg5puZo5YgqqivQ0_xF5J7WA
+
+catalog id : "id": "a9eb134a-e6ca-4593-af13-87af25140585",
+artifact id : "id": "f9e3a74e-76d3-4a0e-a119-a2e5da169601"
+"validationRequestId": "db44ac35-cf3f-439d-917f-fff649d75ae9",
+ "version": "v1",
+      "name": "Demo Adder Java 1",
+      "id": "a9eb134a-e6ca-4593-af13-87af25140585",
+
+eyJhbGciOiJSUzI1NiJ9.eyJqdGkiOiIzZWFlN2ZmMS0wMmU5LTQyODMtYjdlYy0zNDIxMDFlMmQ5MWMiLCJzdWIiOiJrYXJ0aGlrLWNsaWVudC11YWEiLCJzY29wZSI6WyJjbGllbnRzLnJlYWQiLCJwcmVkaXgtYWNzLXRyYWluaW5nLnpvbmVzLmE3YTM0ODQ0LWRkYTEtNDc4Yy05ZjBjLWI0MTU4YjRmZWY0Zi51c2VyIiwiYWNzLnBvbGljaWVzLnJlYWQiLCJhY3MucG9saWNpZXMud3JpdGUiLCJwcmVkaXgtYXNzZXQuem9uZXMuMTI0NTc5NmYtNWUyMi00ODQyLTkzNjEtNzg1ZDQxMDMzZWRkLnVzZXIiLCJhY3MuYXR0cmlidXRlcy5yZWFkIiwiYW5hbHl0aWNzLnpvbmVzLjgwYThmZTA4LWQ0MzItNDg2OS1iYzg2LWZhMmFlOWNkNzAwYi51c2VyIiwiYW5hbHl0aWNzLnpvbmVzLjY2ZWEyNTRlLTc5YmItNDU0NS05YzRkLWM4NGQ1ZDNjNmI2NS51c2VyIiwiYWNzLmF0dHJpYnV0ZXMud3JpdGUiLCJjbGllbnRzLndyaXRlIiwic2NpbS53cml0ZSIsInNjaW0ucmVhZCJdLCJjbGllbnRfaWQiOiJrYXJ0aGlrLWNsaWVudC11YWEiLCJjaWQiOiJrYXJ0aGlrLWNsaWVudC11YWEiLCJhenAiOiJrYXJ0aGlrLWNsaWVudC11YWEiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwicmV2X3NpZyI6IjUzZmEzNTNmIiwiaWF0IjoxNDc1NzQ4NjQyLCJleHAiOjE0NzU3OTE4NDIsImlzcyI6Imh0dHBzOi8vNjg2MGJkZDQtNzk1OC00NDA5LTliMTktZDE3MDY0ODExNzBkLnByZWRpeC11YWEtdHJhaW5pbmcucnVuLmF3cy11c3cwMi1wci5pY2UucHJlZGl4LmlvL29hdXRoL3Rva2VuIiwiemlkIjoiNjg2MGJkZDQtNzk1OC00NDA5LTliMTktZDE3MDY0ODExNzBkIiwiYXVkIjpbImthcnRoaWstY2xpZW50LXVhYSIsImNsaWVudHMiLCJwcmVkaXgtYWNzLXRyYWluaW5nLnpvbmVzLmE3YTM0ODQ0LWRkYTEtNDc4Yy05ZjBjLWI0MTU4YjRmZWY0ZiIsImFjcy5wb2xpY2llcyIsInByZWRpeC1hc3NldC56b25lcy4xMjQ1Nzk2Zi01ZTIyLTQ4NDItOTM2MS03ODVkNDEwMzNlZGQiLCJhY3MuYXR0cmlidXRlcyIsImFuYWx5dGljcy56b25lcy44MGE4ZmUwOC1kNDMyLTQ4NjktYmM4Ni1mYTJhZTljZDcwMGIiLCJhbmFseXRpY3Muem9uZXMuNjZlYTI1NGUtNzliYi00NTQ1LTljNGQtYzg0ZDVkM2M2YjY1Iiwic2NpbSJdfQ.rLssJ21WD8G8rU00g2Z4vFyn25kUb7NyZvGCvgG0AvOxfsKKh6LCShn7e1rNMSf5SoFqOK8wxgPpuCPaiaQhiPbJ9IS_iLeAp_6w8HYt9Ds7gq2C6SP2Es1bi5gZHd9Q0ZEAe__JJGcbdWsN5tV-AwAxy1o6vHu6mXX1G0lpm2wqWrLbnMZu7KZkGHDiDOuS9_pqpLgq-3yB4e4jOr-aDtSN-tZuCOO9zYOI9pSs7yvtJ1rAI1XEgCbG6c6wnGdZmCb09mewKpkMtPJUKJ9KlvnUU_mnJi41DQYvpeUUjRVm6tO-BcOYIbABK3pW9Mz-nBXtYAMil0_wDF9Wl8KaCw
+
+
+
+https://6860bdd4-7958-4409-9b19-d1706481170d.predix-uaa-training.run.aws-usw02-pr.ice.predix.io/oauth/token
+
+ "predix-timeseries": [
+   {
+    "credentials": {
+     "ingest": {
+      "uri": "wss://gateway-predix-data-services.run.aws-usw02-pr.ice.predix.io/v1/stream/messages",
+      "zone-http-header-name": "Predix-Zone-Id",
+      "zone-http-header-value": "380c3de7-c2a0-43cd-88ce-dff691140c52",
+      "zone-token-scopes": [
+       "timeseries.zones.380c3de7-c2a0-43cd-88ce-dff691140c52.user",
+       "timeseries.zones.380c3de7-c2a0-43cd-88ce-dff691140c52.ingest"
+      ]
+     },
+     "query": {
+      "uri": "https://time-series-store-predix.run.aws-usw02-pr.ice.predix.io/v1/datapoints",
+      "zone-http-header-name": "Predix-Zone-Id",
+      "zone-http-header-value": "380c3de7-c2a0-43cd-88ce-dff691140c52",
+      "zone-token-scopes": [
+       "timeseries.zones.380c3de7-c2a0-43cd-88ce-dff691140c52.user",
+       "timeseries.zones.380c3de7-c2a0-43cd-88ce-dff691140c52.query"
+      ]
+     }
+    },
+    "label": "predix-timeseries",
+    "name": "karthik-timeseries",
+    "plan": "Bronze",
+    "provider": null,
+    "syslog_drain_url": null,
+    "tags": [
+     "timeseries",
+     "time-series",
+     "time series"
+    ]
+   }
+  ],
+
+
+
+uaac client update karthik-client-uaa --authorities "clients.read predix-acs-training.zones.a7a34844-dda1-478c-9f0c-b4158b4fef4f.user acs.policies.read acs.policies.write predix-asset.zones.1245796f-5e22-4842-9361-785d41033edd.user acs.attributes.read analytics.zones.80a8fe08-d432-4869-bc86-fa2ae9cd700b.user analytics.zones.66ea254e-79bb-4545-9c4d-c84d5d3c6b65.user acs.attributes.write clients.write scim.write scim.read timeseries.zones.380c3de7-c2a0-43cd-88ce-dff691140c52.user timeseries.zones.380c3de7-c2a0-43cd-88ce-dff691140c52.query timeseries.zones.380c3de7-c2a0-43cd-88ce-dff691140c52.ingest
+
+
+karthik-locomotive-simulator-service.run.aws-usw02-pr.ice.predix.io

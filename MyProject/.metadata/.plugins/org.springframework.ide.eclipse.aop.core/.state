@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="locomotive-simulator"/>
+<aop-project name="locomotive-client"/>
+<aop-project name="alarmservice"/>
+<aop-project name="locomotive-ingestion"/>
+<aop-project name="predixmachine-http-data"/>
+</aop-reference-model>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map>
+	<bundle bundleID="88" name="Predix Machine Model Registry"/>
+	<bundle bundleID="89" name="Predix Machine MQTT Machine Adapter Sample"/>
+	<bundle bundleID="110" name="Predix Machine WebSocket Client IMPL"/>
+	<bundle bundleID="111" name="Predix Machine Websocketclient Service Sample"/>
+	<bundle bundleID="112" name="JAX-RS provider for JSON content type, using Jackson data binding" provider="http://fasterxml.com"/>
+	<bundle bundleID="113" name="Predix Machine HTTP Tunnel Client"/>
+	<bundle bundleID="114" name="agent-osgi-ge-implementation"/>
+	<bundle bundleID="115" name="Jetty :: Websocket :: javax.websocket.server :: Server Implementation" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="116" class="com.prosyst.mbs.impl.services.useradmin.Activator" name="OSGi Service Compendium :: User Admin" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="90" name="Predix Machine Device Utilities"/>
+	<bundle bundleID="117" class="com.prosyst.mbs.impl.web.console.shell.Activator" name="Web Core :: Admin Console :: Shell" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="91" class="org.apache.felix.webconsole.plugins.ds.internal.Activator" name="Apache Felix Web Console Service Component Runtime/Declarative Services Plugin" provider="The Apache Software Foundation"/>
+	<bundle bundleID="118" class="org.apache.felix.inventory.impl.Activator" name="Apache Felix Inventory" provider="The Apache Software Foundation"/>
+	<bundle bundleID="92" name="Predix Machine HTTP Tunnel Common"/>
+	<bundle bundleID="119" name="Predix Machine Hoover Implementation"/>
+	<bundle bundleID="93" class="com.ge.dspmicro.security.admin.impl.Activator" name="Predix Machine Security Admin">
+		<library name="."/>
+		<library name="dsp-crypto-commons-1.0.2.jar"/>
+		<library name="jasypt-1.9.2.jar"/>
+		<library name="commons-codec-1.10.jar"/>
+		<library name="ssl-context-factory-1.0.1.jar"/>
+	</bundle>
+	<bundle bundleID="94" class="com.prosyst.mbs.impl.services.db.DBActivator" name="mBS System Bundles :: DB" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="95" name="Predix Machine Management Impl">
+		<library name="."/>
+		<library name="jbcrypt-0.3m.jar"/>
+	</bundle>
+	<bundle bundleID="96" name="mBS Utility Bundles :: Core API" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="97" name="Jetty :: IO Utility" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="10" name="Jetty :: Websocket :: Server" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="98" name="Jetty :: Websocket :: API" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="11" name="agent-notifications-api"/>
+	<bundle bundleID="99" name="JSON-RPC Web Services :: Core API" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="12" name="Predix Machine WebSocket Client Proxy"/>
+	<bundle bundleID="13" class="org.apache.http.osgi.impl.HttpProxyConfigurationActivator" name="Apache Apache HttpClient OSGi bundle" provider="The Apache Software Foundation"/>
+	<bundle bundleID="14" name="Predix Machine OPC-UA Machine Adapter"/>
+	<bundle bundleID="15" name="Predix Machine OPCUA River Send"/>
+	<bundle bundleID="16" class="com.ge.dspmicro.webconsole.techconsole.Activator" name="Predix Machine Technician Console">
+		<library name="."/>
+		<library name="tika-core-1.10.jar"/>
+	</bundle>
+	<bundle bundleID="17" class="bundle.Activator" name="OSGi Service Compendium :: Config :: Bundle" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="18" name="Predix Machine OPC-UA Common">
+		<library name="."/>
+		<library name="opc-ua-stack-1.02.336.12.jar"/>
+		<library name="opc-ua-java-sdk-client-server-binary-2.1.2_478.jar"/>
+		<library name="scprov-jdk15on-1.47.0.2.jar"/>
+		<library name="scpkix-jdk15on-1.47.0.2.jar"/>
+		<library name="sc-light-jdk15on-1.47.0.2.jar"/>
+		<library name="log4j-1.2.17.jar"/>
+	</bundle>
+	<bundle bundleID="19" name="org.rauschig :: jarchivelib :: Java archiving library"/>
+	<bundle bundleID="120" name="Jetty :: Servlet Handling" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="121" class="com.eclipsesource.jaxrs.provider.multipart.Activator" name="Multipart Provider" provider="EclipseSource"/>
+	<bundle bundleID="1" class="com.prosyst.mbs.impl.framework.log.redirect.Activator" name="com.prosyst.mbs.system.bundle" provider="ProSyst"/>
+	<bundle bundleID="122" name="Predix Machine Web Console Branding"/>
+	<bundle bundleID="2" name="Predix Machine Hoover Service Sample">
+		<library name="."/>
+		<library name="amqp-client-3.4.3.jar"/>
+	</bundle>
+	<bundle bundleID="123" name="Predix Machine Command Handler - Machine"/>
+	<bundle bundleID="3" class="com.eclipsesource.jaxrs.publisher.internal.Activator" localization="plugin" name="%Bundle-Name" provider="%Bundle-Name"/>
+	<bundle bundleID="124" class="org.h2.util.DbDriverActivator" name="H2 Database Engine" provider="H2 Group"/>
+	<bundle bundleID="4" name="Predix Machine Subscription Machine Adapter Sample"/>
+	<bundle bundleID="125" name="Apache Commons Compress" provider="The Apache Software Foundation"/>
+	<bundle bundleID="5" name="Predix Machine Health Monitor Machine Adapter"/>
+	<bundle bundleID="126" name="Predix Machine Predix Cloud Enrollment"/>
+	<bundle bundleID="6" name="Apache Commons Collections" provider="The Apache Software Foundation"/>
+	<bundle bundleID="127" name="Predix Machine Modbus Machine Adapter">
+		<library name="."/>
+		<library name="jamod-1.2.jar"/>
+	</bundle>
+	<bundle bundleID="7" name="OSGi Service Compendium :: Core API" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="128" name="Apache Apache HttpCore OSGi bundle" provider="The Apache Software Foundation"/>
+	<bundle bundleID="8" name="jersey-all" provider="Holger Staudacher"/>
+	<bundle bundleID="129" class="org.ops4j.pax.logging.service.internal.Activator" name="OPS4J Pax Logging - Service" provider="OPS4J - Open Participation Software for Java"/>
+	<bundle bundleID="9" class="org.apache.felix.webconsole.plugins.event.internal.Activator" name="Apache Felix Web Console Event Plugin" provider="The Apache Software Foundation"/>
+	<bundle bundleID="20" name="bcprov"/>
+	<bundle bundleID="21" name="Predix Machine Command Framework"/>
+	<bundle bundleID="22" name="Predix Machine MQTT Machine Adapter"/>
+	<bundle bundleID="23" class="com.ge.dspmicro.webconsole.validateroute.Activator" name="Predix Machine Validate Route"/>
+	<bundle bundleID="24" class="com.prosyst.mbs.impl.services.scm.Activator" name="OSGi Service Compendium :: Component Runtime" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="25" name="Predix Machine Health Machine Adapter Sample"/>
+	<bundle bundleID="26" name="Predix Machine Store Forward Service Client Sample"/>
+	<bundle bundleID="27" class="com.prosyst.mbs.impl.services.event.Activator" name="OSGi Service Compendium :: Event Admin" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="28" name="Predix Machine Predix Device Auto-Enrollment Environment Info Service">
+		<library name="."/>
+		<library name="ini4j-0.5.4.jar"/>
+	</bundle>
+	<bundle bundleID="29" name="Java Servlet API" provider="GlassFish Community"/>
+	<bundle bundleID="130" class="com.prosyst.mbs.impl.services.remote.main.Activator" name="JSON-RPC Web Services :: JSON-RPC Core" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="131" name="Predix Machine Httpclient Service Sample"/>
+	<bundle bundleID="132" class="org.apache.servicemix.specs.activation.Activator" name="Apache ServiceMix :: Specs :: Activation API 1.4" provider="The Apache Software Foundation"/>
+	<bundle bundleID="133" class="com.prosyst.mbs.impl.services.remote.useradmin.Activator" name="JSON-RPC Web Services :: Handler :: User Admin" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="134" class="bundle.Activator" name="OSGi Service Compendium :: Metatype :: Bundle" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="135" class="org.apache.servicemix.specs.locator.Activator" name="Apache ServiceMix :: Specs :: JAXB API 2.2" provider="The Apache Software Foundation"/>
+	<bundle bundleID="136" class="org.apache.servicemix.specs.locator.Activator" name="Apache ServiceMix :: Specs :: Stax API 1.0" provider="The Apache Software Foundation"/>
+	<bundle bundleID="137" name="Predix Machine TCP Socket Server"/>
+	<bundle bundleID="138" class="com.prosyst.util.impl.console.ConsoleActivator" name="mBS System Bundles :: Console" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="139" name="Predix Machine Predix Cloud Identity Management Service"/>
+	<bundle bundleID="30" class="org.apache.felix.http.bundle.internal.CombinedActivator" name="Apache Felix Http Bundle" provider="The Apache Software Foundation"/>
+	<bundle bundleID="31" name="Jackson JSON processor" provider="http://fasterxml.com"/>
+	<bundle bundleID="32" name="Predix Machine River API"/>
+	<bundle bundleID="33" class="com.ge.dspmicro.webconsole.storeforward.Activator" name="Predix Machine Web Console Store Forward"/>
+	<bundle bundleID="34" name="Predix Machine Websocketserver Service Sample"/>
+	<bundle bundleID="35" name="Predix Machine Validate Route API"/>
+	<bundle bundleID="36" name="Predix Machine Machine Gateway API"/>
+	<bundle bundleID="37" name="Predix Machine Basic Machine Adapter Sample"/>
+	<bundle bundleID="38" name="osgi.cmpn" provider="OSGi Alliance"/>
+	<bundle bundleID="39" name="Predix Machine Security Service Sample"/>
+	<bundle bundleID="40" class="com.prosyst.mbs.impl.inventory.Activator" name="mBS Utility Bundles :: Inventory" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="41" name="Predix Machine WebSocket River Sample"/>
+	<bundle bundleID="42" name="OSGi Service Compendium :: Extension Bundle" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="43" name="Predix Machine HTTP River Send"/>
+	<bundle bundleID="44" class="org.apache.felix.fileinstall.internal.FileInstall" name="Apache Felix File Install" provider="The Apache Software Foundation"/>
+	<bundle bundleID="45" name="Predix Machine OPC-UA Server"/>
+	<bundle bundleID="46" name="Predix Machine WebSocket Server"/>
+	<bundle bundleID="47" name="Predix Machine Custom Cloud Polling Sample"/>
+	<bundle bundleID="48" class="org.apache.felix.webconsole.internal.OsgiManagerActivator" name="Apache Felix Web Management Console" provider="The Apache Software Foundation"/>
+	<bundle bundleID="49" name="bcpkix"/>
+	<bundle bundleID="50" name="Jetty :: Websocket :: Client" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="51" name="Predix Machine Machine Gateway Impl"/>
+	<bundle bundleID="52" name="Predix Machine Web Console Change Password"/>
+	<bundle bundleID="53" class="org.apache.felix.webconsole.plugins.packageadmin.internal.Activator" name="Apache Felix Web Console Package Admin Service Plugin" provider="The Apache Software Foundation"/>
+	<bundle bundleID="54" class="com.prosyst.mbs.impl.services.commands.Activator" name="OSGi Service Compendium :: Commands" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="55" name="Jetty :: Http Utility" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="56" name="Predix Machine HttpClient">
+		<library name="."/>
+		<library name="cxf-rt-rs-security-oauth2-2.7.3.jar"/>
+	</bundle>
+	<bundle bundleID="57" name="Predix Machine WebSocket Client Proxy Fragment"/>
+	<bundle bundleID="58" name="Predix Machine Store Forward Implementation"/>
+	<bundle bundleID="59" name="Predix Machine Web Console User Admin"/>
+	<bundle bundleID="60" name="agent-model"/>
+	<bundle bundleID="61" class="org.apache.felix.dm.impl.Activator" name="Apache Felix Dependency Manager" provider="The Apache Software Foundation"/>
+	<bundle bundleID="62" name="Apache Commons Codec" provider="The Apache Software Foundation"/>
+	<bundle bundleID="63" class="com.eclipsesource.jaxrs.provider.security.impl.Activator" name="OSGi - JAX-RS Security Provider" provider="EclipseSource"/>
+	<bundle bundleID="64" name="Jetty :: Websocket :: javax.websocket :: Client Implementation" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="65" name="Commons FileUpload" provider="The Apache Software Foundation"/>
+	<bundle bundleID="66" name="Protocol Buffer Java API" provider="Google"/>
+	<bundle bundleID="67" name="Jetty :: Security" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="68" name="Predix Machine Configuration and Metatype Sample"/>
+	<bundle bundleID="69" name="Predix Machine Store Forward API"/>
+	<bundle bundleID="70" class="org.ops4j.pax.logging.internal.Activator" name="OPS4J Pax Logging - API" provider="OPS4J - Open Participation Software for Java"/>
+	<bundle bundleID="71" name="Data mapper for Jackson JSON processor" provider="http://fasterxml.com"/>
+	<bundle bundleID="72" name="External Libraries :: JSON for Java (org.json)" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="73" name="Jetty :: Server Core" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="74" name="Commons IO" provider="The Apache Software Foundation"/>
+	<bundle bundleID="75" name="Predix Machine HTTP River Sample"/>
+	<bundle bundleID="76" name="Apache Commons Lang" provider="The Apache Software Foundation"/>
+	<bundle bundleID="77" name="mBS System Bundles :: Core API" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="78" name="Predix Machine JAX-RS JSON Entity Provider"/>
+	<bundle bundleID="79" name="Apache ServiceMix :: Bundles :: jaxb-impl" provider="The Apache Software Foundation"/>
+	<bundle bundleID="100" name="External Libraries :: org.kxml2" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="101" name="Predix Machine Auto Enrollment - Certificate"/>
+	<bundle bundleID="102" name="Commons Lang" provider="The Apache Software Foundation"/>
+	<bundle bundleID="103" name="WebSocket server API" provider="Oracle"/>
+	<bundle bundleID="104" name="Predix Machine WebSocket River Send"/>
+	<bundle bundleID="105" class="com.prosyst.util.impl.parser.Activator" name="mBS System Bundles :: Commands" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="106" name="Predix Machine MQTT Client">
+		<library name="."/>
+		<library name="org.eclipse.paho.client.mqttv3-1.0.2.jar"/>
+	</bundle>
+	<bundle bundleID="80" class="com.prosyst.util.impl.tpt.Activator" name="mBS System Bundles :: Timer and Thread Pool" provider="ProSyst Software GmbH"/>
+	<bundle bundleID="107" name="Predix Machine Git Repository Sample"/>
+	<bundle bundleID="81" name="Predix Machine Git Repository">
+		<library name="."/>
+		<library name="org.eclipse.jgit-4.0.1.201506240215-r.jar"/>
+		<library name="jsch-0.1.53.jar"/>
+		<library name="JavaEWAH-0.7.9.jar"/>
+	</bundle>
+	<bundle bundleID="108" name="Jetty :: Websocket :: Common" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="82" name="Jetty :: Utilities" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="109" name="Predix Machine MQTT River Send"/>
+	<bundle bundleID="83" name="Predix Machine MQTT Client Sample"/>
+	<bundle bundleID="84" name="Predix Machine Hoover API"/>
+	<bundle bundleID="85" name="agent-api"/>
+	<bundle bundleID="86" name="Jetty :: Websocket :: Servlet Interface" provider="Eclipse Jetty Project"/>
+	<bundle bundleID="87" class="com.prosyst.mbs.impl.web.common.Activator" name="Web Core :: Core API" provider="ProSyst Software GmbH"/>
+</map>
